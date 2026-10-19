@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Портфолио Матвея Завьялова — начинающего веб-разработчика">
+    <title>Матвей Завьялов | Веб-разработка</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+<div class="nav-container">
+    <div class="logo">MZ</div>
+    <ul class="nav-links">
+        <li><a href="#firstSection" class="nav-link" data-key="navHome">Главная</a></li>
+        <li><a href="#secondSection" class="nav-link" data-key="navSkills">Умею</a></li>
+        <li><a href="#thirdSection" class="nav-link" data-key="navOffer">Предлагаю</a></li>
+        <li><a href="#fourthSection" class="nav-link" data-key="navBooking">Запись</a></li>
+    </ul>
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+    </nav>
+
+    <main>
+        <!-- ===== СЕКЦИЯ 1: HERO ===== -->
+        <section class="hero fullscreen" id="firstSection">
+            <div class="hero-bg-pattern"></div>
+            <div class="hero-glow"></div>
+
+            <div class="hero-container">
+                <div class="hero-photo-block">
+                    <div class="photo-frame-decoration"></div>
+                    <div class="photo-frame">
+                        <!-- ЗАМЕНИТЕ этот блок на <img src="photo.jpg" alt="Матвей Завьялов"> -->
+                        <img src="photo.jpg" alt="________________">
+                    </div>
+                    <div class="photo-floating-dot dot-1"></div>
+                    <div class="photo-floating-dot dot-2"></div>
+                    <div class="photo-floating-dot dot-3"></div>
+                </div>
+
+                <div class="hero-content">
+                    <h1 class="hero-name">
+                        <span class="hero-first" data-key="firstName">Матвей</span>
+                        <span class="hero-last accent" data-key="lastName">Завьялов</span>
+                    </h1>
+
+                    <p class="hero-title" data-key="heroTitle">Начинающий веб-разработчик</p>
+
+                    <p class="hero-description" data-key="heroDescription">
+                        Создаю современные адаптивные сайты и Telegram-ботов.
+                        Учусь на бухгалтера-экономиста, но веб-разработка - моё главное увлечение.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#fourthSection" class="btn btn-primary" data-key="heroCTA">Обсудить проект</a>
+                        <a href="#thirdSection" class="btn btn-secondary" data-key="heroCTA2">Смотреть работы</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">17</span>
+                            <span class="stat-label" data-key="statAge">лет</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label" data-key="statProjects">проектов</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label" data-key="statEnthusiasm">на связи</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll">
+                <span data-key="scrollDown">Листай вниз</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ===== СЕКЦИЯ 2: НАВЫКИ ===== -->
+        <section class="second-section" id="secondSection">
+            <div class="second-bg-pattern"></div>
+            <div class="second-glow"></div>
+
+            <div class="second-container">
+                <div class="button-column">
+                    <button class="square-btn active" data-btn="1">01</button>
+                    <button class="square-btn" data-btn="2">02</button>
+                    <button class="square-btn" data-btn="3">03</button>
+                    <button class="square-btn" data-btn="4">04</button>
+                    <button class="square-btn" data-btn="5">05</button>
+                </div>
+
+                <div class="text-column">
+                    <h2 class="section-title-small" id="smallTitle">Работа с ИИ инструментами</h2>
+                    <p class="skill-text" id="skillText"></p>
+                    <div class="skill-tags" id="skillTags"></div>
+                </div>
+
+<div class="decorative-elements" id="stickerBoard">
+    <!-- 1: блок кода -->
+    <div class="sticker sticker-code sticker-1 visible" data-sticker="1">
+        <span class="code-line"><span class="code-keyword">const</span> <span class="code-var">skills</span> = <span class="code-bracket">[</span></span>
+        <span class="code-line">&nbsp;&nbsp;<span class="code-string">'AI'</span>, <span class="code-string">'Bots'</span>,</span>
+        <span class="code-line">&nbsp;&nbsp;<span class="code-string">'Design'</span></span>
+        <span class="code-line"><span class="code-bracket">]</span>;</span>
+    </div>
+
+    <!-- 2: простой текст со смайликом -->
+    <div class="sticker sticker-plain sticker-2" data-sticker="2">🤖 AI</div>
+
+    <!-- 3: круглый бейдж про анимации -->
+    <div class="sticker sticker-badge sticker-3" data-sticker="3">
+        <span class="badge-top">CSS</span>
+        <span class="badge-icon">✨</span>
+        <span class="badge-bottom">MOTION</span>
+    </div>
+
+    <!-- 4: блок кода (как 1, но другие слова) -->
+    <div class="sticker sticker-code sticker-4" data-sticker="4">
+        <span class="code-line"><span class="code-keyword">function</span> <span class="code-var">support</span>() {</span>
+        <span class="code-line">&nbsp;&nbsp;<span class="code-keyword">return</span> <span class="code-string">'24/7'</span>;</span>
+        <span class="code-line">}</span>
+        <span class="code-line"><span class="code-var">support</span>();</span>
+    </div>
+
+    <!-- 5: лента-баннер ADAPTIVE -->
+    <div class="sticker sticker-ribbon sticker-5" data-sticker="5">ADAPTIVE</div>
+</div>
+            </div>
+        </section>
+
+        <div class="divider-between"></div>
+
+        <!-- ===== СЕКЦИЯ 3: УСЛУГИ + ПРОЕКТЫ ===== -->
+        <section class="third-section" id="thirdSection">
+            <div class="third-bg-pattern"></div>
+
+            <div class="third-container">
+                <h2 class="section-heading" data-key="servicesHeading">Что я <span class="accent">предлагаю</span></h2>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3 data-key="service1Title">Сайт-визитка</h3>
+                        <p data-key="service1Desc">Компактный сайт из 3-5 страниц с информацией о компании или человеке. Подходит фрилансерам и небольшим компаниям.</p>
+                        <div class="service-features">
+                            <span>3-5 страниц</span>
+                            <span>Адаптив</span>
+                            <span>Форма связи</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card featured">
+                        <div class="service-badge" data-key="servicePopular">Популярно</div>
+                        <h3 data-key="service2Title">Лендинг</h3>
+                        <p data-key="service2Desc">Одностраничный сайт для продажи одного товара или услуги. Подходит для рекламных кампаний и запуска новых продуктов.</p>
+                        <div class="service-features">
+                            <span>1 страница</span>
+                            <span>Конверсия</span>
+                            <span>Анимации</span>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <h3 data-key="service3Title">Интернет-магазин</h3>
+                        <p data-key="service3Desc">Многостраничный сайт с каталогом товаров, корзиной и оформлением заказа. Подходит для продажи любых товаров.</p>
+                        <div class="service-features">
+                            <span>Каталог</span>
+                            <span>Корзина</span>
+                            <span>Оплата</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-heading projects-heading" data-key="projectsHeading">Мои <span class="accent">работы</span></h2>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-thumbnail thumb-1">
+                            <span class="project-icon">💻</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-key="project1Title">Портфолио</h3>
+                            <p data-key="project1Desc">Сайт-визитка, который вы сейчас смотрите. Создан с нуля: HTML, CSS, JavaScript, адаптивная вёрстка, форма с отправкой в Telegram.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-thumbnail thumb-2">
+                            <span class="project-icon">🤖</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-key="project2Title">Telegram-бот</h3>
+                            <p data-key="project2Desc">Бот для приёма заявок и автоматизации общения с клиентами. Подключается к сайту и отправляет уведомления в Telegram.</p>
+                            <div class="project-tags">
+                                <span>Python</span><span>Telegram API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-thumbnail thumb-3">
+                            <span class="project-icon">☕</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-key="project3Title">Лендинг для кофейни</h3>
+                            <p data-key="project3Desc">Концепт одностраничного сайта для кофейни: меню, галерея, форма бронирования. Дизайн в тёплых тонах с плавными анимациями.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>Animations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-thumbnail thumb-4">
+                            <span class="project-icon">🧮</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-key="project4Title">Калькулятор</h3>
+                            <p data-key="project4Desc">Простой калькулятор на JavaScript. Тренировочный проект для отработки работы с DOM, событиями и логикой вычислений.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-thumbnail thumb-5">
+                            <span class="project-icon">✅</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-key="project5Title">Список задач</h3>
+                            <p data-key="project5Desc">To-Do приложение с добавлением, удалением и отметкой выполненных задач. Сохраняет данные в браузере, чтобы не терять при перезагрузке.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-thumbnail thumb-6">
+                            <span class="project-icon">🌤️</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-key="project6Title">Погодное приложение</h3>
+                            <p data-key="project6Desc">Мини-приложение, которое показывает текущую погоду в выбранном городе. Работает с внешним API и обновляет данные по запросу.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- ===== СЕКЦИЯ 4: КОНТАКТЫ ===== -->
+        <section class="fourth-section" id="fourthSection">
+            <div class="fourth-bg-pattern"></div>
+            <div class="fourth-glow"></div>
+
+            <div class="fourth-container">
+<div class="contact-info">
+    <h2 class="contact-heading" data-key="contactHeading">Давайте <span class="accent">работать</span> вместе</h2>
+
+<div class="contact-details">
+    <a href="https://t.me/username" class="contact-square" target="_blank" rel="noopener">
+        <span class="contact-icon">💬</span>
+        <div class="contact-square-text">
+            <span class="contact-label">Telegram</span>
+            <span class="contact-value">@username</span>
+        </div>
+        <span class="contact-square-label">TG</span>
+    </a>
+    <a href="https://vk.com/username" class="contact-square" target="_blank" rel="noopener">
+        <span class="contact-icon">🅥</span>
+        <div class="contact-square-text">
+            <span class="contact-label">ВКонтакте</span>
+            <span class="contact-value">vk.com/username</span>
+        </div>
+        <span class="contact-square-label">VK</span>
+    </a>
+    <a href="mailto:matvzg7796@mail.ru" class="contact-square">
+        <span class="contact-icon">📧</span>
+        <div class="contact-square-text">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">matvzg7796@mail.ru</span>
+        </div>
+        <span class="contact-square-label">Email</span>
+    </a>
+</div>
+
+    <div class="contact-note">
+        <span class="note-icon">💡</span>
+        <span data-key="contactNote">Чем подробнее опишете задачу, тем быстрее я смогу ответить с решением.</span>
+    </div>
+</div>
+
+                <div class="form-container">
+                    <h2 data-key="formTitle">Оставьте заявку</h2>
+                    <form id="orderForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="formName" placeholder=" " required>
+                                <label data-key="formName">Имя</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="formPhone" placeholder=" " required>
+                                <label data-key="formPhone">Телефон</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" placeholder=" " required>
+                            <label data-key="formEmail">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="formService" list="services" placeholder=" " required>
+                            <datalist id="services">
+                                <option value="Сайт-визитка">
+                                <option value="Лендинг">
+                                <option value="Интернет-магазин">
+                                <option value="Telegram-бот">
+                            </datalist>
+                            <label data-key="formServiceLabel">Тип сайта</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="formComment" placeholder=" ">
+                            <label data-key="formComment">Комментарий</label>
+                        </div>
+                        <button type="submit" class="submit-btn" data-key="formSubmit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text" data-key="footerText">© 2026 Матвей Завьялов. Сделано с ❤️ и кодом.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
