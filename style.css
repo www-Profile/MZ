@@ -1062,6 +1062,7 @@ body {
     }
     .contact-info { display: contents; }
     .contact-info .contact-heading { display: none; }
+    .hero-scroll { display: none; }
     .form-container { order: 2; margin-bottom: 0; padding: 26px; }
     .contact-details {
         order: 3;
