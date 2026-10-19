@@ -2,8 +2,7 @@
 const BOT_TOKEN = '8371303266:AAG4PnJoMnbzonK_2VRQJQtadfrDAOWG7CE';
 const CHAT_ID = '1686066001';
 
-// ===== ТЕГИ НАВЫКОВ =====
-// Если чего-то не знаешь — просто удали из массива или замени на своё
+// ===== ТЕГИ НАВЫКОВ (десктоп) =====
 const skillTags = {
     1: ['ChatGPT', 'DeepSeek', 'Claude', 'Grok'],
     2: ['Telegram API', 'JavaScript', 'Приём заявок', 'Уведомления'],
@@ -21,7 +20,7 @@ const translations = {
         navBooking: 'Запись',
 
         heroTitle: 'Начинающий веб-разработчик',
-        heroDescription: 'Создаю современные адаптивные сайты и Telegram-ботов. Учусь на бухгалтера-экономиста в Кировском ПТ, но веб-разработка — моё главное увлечение.',
+        heroDescription: 'Создаю современные адаптивные сайты и Telegram-ботов. Учусь на бухгалтера-экономиста, но веб-разработка - моё главное увлечение.',
         heroCTA: 'Обсудить проект',
         heroCTA2: 'Смотреть работы',
         statAge: 'лет',
@@ -44,7 +43,7 @@ const translations = {
         skillText4: 'Помогаю с доработками, правками и поддержкой сайта после запуска. Если что-то нужно изменить или добавить — всегда на связи. Работаем до результата, который тебя устроит.',
         skillText5: 'Верстаю адаптивные сайты, которые одинаково хорошо выглядят на ПК, планшетах и телефонах. Все элементы подстраиваются под размер экрана, меню удобно раскрывается, текст остаётся читаемым на любом устройстве без зума.',
 
-        servicesHeading: 'Что я предлагаю',
+        servicesHeading: 'Что я <span class="accent">предлагаю</span>',
         servicePopular: 'Популярно',
         service1Title: 'Сайт-визитка',
         service1Desc: 'Компактный сайт из 3-5 страниц с информацией о компании или человеке. Подходит фрилансерам и небольшим компаниям.',
@@ -53,7 +52,7 @@ const translations = {
         service3Title: 'Интернет-магазин',
         service3Desc: 'Многостраничный сайт с каталогом товаров, корзиной и оформлением заказа. Подходит для продажи любых товаров.',
 
-        projectsHeading: 'Мои работы',
+        projectsHeading: 'Мои <span class="accent">работы</span>',
         project1Title: 'Портфолио',
         project1Desc: 'Сайт-визитка, который вы сейчас смотрите. Создан с нуля: HTML, CSS, JavaScript, адаптивная вёрстка, форма с отправкой в Telegram.',
         project2Title: 'Telegram-бот',
@@ -67,7 +66,7 @@ const translations = {
         project6Title: 'Погодное приложение',
         project6Desc: 'Мини-приложение, которое показывает текущую погоду в выбранном городе. Работает с внешним API и обновляет данные по запросу.',
 
-        contactHeading: 'Давайте работать вместе',
+        contactHeading: 'Давайте <span class="accent">работать</span> вместе',
         contactNote: 'Чем подробнее опишете задачу, тем быстрее я смогу ответить с решением.',
 
         formTitle: 'Оставьте заявку',
@@ -78,7 +77,7 @@ const translations = {
         formComment: 'Комментарий',
         formSubmit: 'Отправить',
 
-        footerText: '© 2025 Матвей Завьялов. Сделано с ❤️ и кодом.'
+        footerText: '© 2026 Матвей Завьялов. Сделано с ❤️ и кодом.'
     },
     en: {
         navHome: 'Home',
@@ -87,7 +86,7 @@ const translations = {
         navBooking: 'Booking',
 
         heroTitle: 'Junior Web Developer',
-        heroDescription: 'I build modern responsive websites and Telegram bots. I study accounting and economics at Kirovsky PT, but web development is my main passion.',
+        heroDescription: 'I build modern responsive websites and Telegram bots. I study accounting and economics, but web development is my main passion.',
         heroCTA: 'Discuss a project',
         heroCTA2: 'View works',
         statAge: 'years',
@@ -110,7 +109,7 @@ const translations = {
         skillText4: 'I help with improvements, edits and website support after launch. If something needs to be changed or added — always in touch. We work until the result that suits you.',
         skillText5: 'I create responsive websites that look great on PC, tablets and phones. All elements adapt to the screen size, the menu opens comfortably, the text remains readable on any device without zooming.',
 
-        servicesHeading: 'What I offer',
+        servicesHeading: 'What I <span class="accent">offer</span>',
         servicePopular: 'Popular',
         service1Title: 'Business Card Site',
         service1Desc: 'A compact site of 3-5 pages with information about a company or person. Suitable for freelancers and small businesses.',
@@ -119,7 +118,7 @@ const translations = {
         service3Title: 'Online Store',
         service3Desc: 'Multi-page site with product catalog, cart and checkout. Suitable for selling any goods.',
 
-        projectsHeading: 'My works',
+        projectsHeading: 'My <span class="accent">works</span>',
         project1Title: 'Portfolio',
         project1Desc: 'The business card site you are looking at right now. Built from scratch: HTML, CSS, JavaScript, responsive layout, form with Telegram integration.',
         project2Title: 'Telegram Bot',
@@ -133,7 +132,7 @@ const translations = {
         project6Title: 'Weather App',
         project6Desc: 'A mini-app showing current weather in the selected city. Works with an external API and refreshes data on demand.',
 
-        contactHeading: 'Let\'s work together',
+        contactHeading: 'Let\'s <span class="accent">work</span> together',
         contactNote: 'The more details you describe, the faster I can reply with a solution.',
 
         formTitle: 'Leave a request',
@@ -144,11 +143,12 @@ const translations = {
         formComment: 'Comment',
         formSubmit: 'Send',
 
-        footerText: '© 2025 Matvey Zavyalov. Made with ❤️ and code.'
+        footerText: '© 2026 Matvey Zavyalov. Made with ❤️ and code.'
     }
 };
 
 let currentLang = 'ru';
+const submitBtn = document.querySelector('.submit-btn');
 
 // ===== ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА =====
 function setLanguage(lang) {
@@ -156,22 +156,21 @@ function setLanguage(lang) {
 
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
-        if (translations[lang][key]) {
-            if (element.innerHTML.includes('class="accent"')) {
-                element.innerHTML = translations[lang][key].replace(
-                    /(\S+)$/,
-                    '<span class="accent">$1</span>'
-                );
-            } else {
-                element.textContent = translations[lang][key];
-            }
+        if (!translations[lang][key]) return;
+
+        // Не трогаем кнопку отправки, если она в процессе/после отправки
+        if (element === submitBtn && submitBtn.disabled) return;
+
+        // Если в переводе есть HTML-разметка (accent) — вставляем как HTML
+        if (translations[lang][key].includes('<span')) {
+            element.innerHTML = translations[lang][key];
+        } else {
+            element.textContent = translations[lang][key];
         }
     });
 
     const activeBtn = document.querySelector('.square-btn.active');
-    if (activeBtn) {
-        updateContent(activeBtn.getAttribute('data-btn'));
-    }
+    if (activeBtn) updateContent(activeBtn.getAttribute('data-btn'));
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
@@ -204,20 +203,18 @@ function updateContent(btnId) {
         tagsElement.innerHTML = tags.map(tag => `<span class="skill-tag">${tag}</span>`).join('');
     }
 
-    // Показываем стикеры накопительно
     const currentNum = parseInt(btnId);
+
     document.querySelectorAll('.sticker').forEach(sticker => {
         const num = parseInt(sticker.dataset.sticker);
         sticker.classList.toggle('visible', num <= currentNum);
     });
 
-    // На шаге 5 — собираем в сетку 2x2, на остальных — разброс
     const board = document.getElementById('stickerBoard');
     if (board) {
         board.classList.toggle('grid-mode', currentNum === 5);
     }
 
-    // Стикер 2: на шаге 5 меняем текст на "🤖 AI agent"
     const sticker2 = document.querySelector('.sticker-2');
     if (sticker2) {
         sticker2.textContent = currentNum === 5 ? '🤖 AI agent' : '🤖 AI';
@@ -249,9 +246,7 @@ updateContent('1');
 
 // ===== ОТПРАВКА ФОРМЫ В TELEGRAM =====
 const form = document.getElementById('orderForm');
-const submitBtn = form ? form.querySelector('.submit-btn') : null;
 
-// Сохраняем исходный текст кнопки для текущего языка
 function getSubmitText() {
     return translations[currentLang].formSubmit || 'Отправить';
 }
@@ -266,14 +261,10 @@ if (form && submitBtn) {
         const service = document.getElementById('formService').value.trim();
         const comment = document.getElementById('formComment').value.trim();
 
-        // Валидация
         if (!name || !phone || !email || !service) {
-            submitBtn.textContent = currentLang === 'ru'
-                ? 'Заполните поля'
-                : 'Fill in all fields';
+            submitBtn.textContent = currentLang === 'ru' ? 'Заполните поля' : 'Fill in all fields';
             submitBtn.style.background = '#f76a40';
             submitBtn.style.borderColor = '#f76a40';
-
             setTimeout(() => {
                 submitBtn.textContent = getSubmitText();
                 submitBtn.style.background = '';
@@ -282,7 +273,6 @@ if (form && submitBtn) {
             return;
         }
 
-        // Состояние "Отправка..."
         submitBtn.disabled = true;
         submitBtn.textContent = currentLang === 'ru' ? 'Отправка...' : 'Sending...';
         submitBtn.style.opacity = '0.7';
@@ -300,34 +290,24 @@ if (form && submitBtn) {
             const result = await response.json();
 
             if (result.ok) {
-                // Успех
-                submitBtn.textContent = currentLang === 'ru'
-                    ? '✓ Отправлено!'
-                    : '✓ Sent!';
+                submitBtn.textContent = currentLang === 'ru' ? '✓ Отправлено!' : '✓ Sent!';
                 submitBtn.style.background = '#7bc87b';
                 submitBtn.style.borderColor = '#7bc87b';
                 submitBtn.style.color = '#0b0c10';
                 form.reset();
             } else {
-                // Ошибка API
-                submitBtn.textContent = currentLang === 'ru'
-                    ? 'Ошибка. Повторите'
-                    : 'Error. Retry';
+                submitBtn.textContent = currentLang === 'ru' ? 'Ошибка. Повторите' : 'Error. Retry';
                 submitBtn.style.background = '#f76a40';
                 submitBtn.style.borderColor = '#f76a40';
                 console.error('Telegram API error:', result);
             }
         } catch (error) {
-            // Сетевая ошибка
-            submitBtn.textContent = currentLang === 'ru'
-                ? 'Ошибка сети'
-                : 'Network error';
+            submitBtn.textContent = currentLang === 'ru' ? 'Ошибка сети' : 'Network error';
             submitBtn.style.background = '#f76a40';
             submitBtn.style.borderColor = '#f76a40';
             console.error('Network error:', error);
         }
 
-        // Возврат кнопки в исходное состояние через 3 секунды
         setTimeout(() => {
             submitBtn.textContent = getSubmitText();
             submitBtn.disabled = false;
@@ -340,32 +320,23 @@ if (form && submitBtn) {
     });
 }
 
-// Если язык переключается во время показа статуса — вернём текст кнопки
-const originalSetLanguage = setLanguage;
-setLanguage = function(lang) {
-    originalSetLanguage(lang);
-    if (submitBtn && !submitBtn.disabled) {
-        submitBtn.textContent = translations[lang].formSubmit || 'Отправить';
-    }
-};
-
 // ===== МОБИЛЬНОЕ МЕНЮ =====
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.querySelector('.nav-links');
-const langSwitcher = document.querySelector('.lang-switcher');
+const navLinksEl = document.querySelector('.nav-links');
+const langSwitcherEl = document.querySelector('.lang-switcher');
 
-if (mobileMenuBtn && navLinks && langSwitcher) {
+if (mobileMenuBtn && navLinksEl && langSwitcherEl) {
     mobileMenuBtn.addEventListener('click', () => {
         mobileMenuBtn.classList.toggle('open');
-        navLinks.classList.toggle('mobile-open');
-        langSwitcher.classList.toggle('mobile-open');
+        navLinksEl.classList.toggle('mobile-open');
+        langSwitcherEl.classList.toggle('mobile-open');
     });
 
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenuBtn.classList.remove('open');
-            navLinks.classList.remove('mobile-open');
-            langSwitcher.classList.remove('mobile-open');
+            navLinksEl.classList.remove('mobile-open');
+            langSwitcherEl.classList.remove('mobile-open');
         });
     });
 }

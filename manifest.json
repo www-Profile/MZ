@@ -1,0 +1,11 @@
+{
+    "name": "Матвей Завьялов — Веб-разработка",
+    "short_name": "MZ",
+    "description": "Портфолио Матвея Завьялова — начинающего веб-разработчика",
+    "lang": "ru",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#0b0c10",
+    "theme_color": "#f76a40"
+}
