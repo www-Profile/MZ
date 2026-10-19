@@ -981,14 +981,14 @@ body {
     .mobile-menu-panel {
         display: flex;
         flex-direction: column;
-        position: fixed;
-        top: 40px;
+        position: absolute;   /* вместо fixed */
+        top: 100%;            /* ровно под шапкой */
         left: 0;
         width: 100%;
         background: rgba(11, 12, 16, 0.98);
         backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border);
-        padding: 0 0 10px 0 ;
+        padding: 20px;
         opacity: 0;
         pointer-events: none;
         transform: translateY(-10px);
