@@ -15,27 +15,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon&display=swap" rel="stylesheet">
 </head>
 <body>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">MZ</div>
 
-    <nav class="navbar">
-<div class="nav-container">
-    <div class="logo">MZ</div>
-    <ul class="nav-links">
-        <li><a href="#firstSection" class="nav-link" data-key="navHome">Главная</a></li>
-        <li><a href="#secondSection" class="nav-link" data-key="navSkills">Умею</a></li>
-        <li><a href="#thirdSection" class="nav-link" data-key="navOffer">Предлагаю</a></li>
-        <li><a href="#fourthSection" class="nav-link" data-key="navBooking">Запись</a></li>
-    </ul>
-    <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ru">RU</button>
-        <button class="lang-btn" data-lang="en">EN</button>
+        <div class="mobile-menu-panel" id="mobileMenuPanel">
+            <ul class="nav-links">
+                <li><a href="#firstSection" class="nav-link" data-key="navHome">Главная</a></li>
+                <li><a href="#secondSection" class="nav-link" data-key="navSkills">Умею</a></li>
+                <li><a href="#thirdSection" class="nav-link" data-key="navOffer">Предлагаю</a></li>
+                <li><a href="#fourthSection" class="nav-link" data-key="navBooking">Запись</a></li>
+                <li class="lang-item">
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-</div>
-    </nav>
+</nav>
 
     <main>
         <!-- ===== СЕКЦИЯ 1: HERO ===== -->

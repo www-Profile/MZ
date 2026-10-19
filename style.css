@@ -47,6 +47,9 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.mobile-menu-panel {
+    display: contents;
+}
 .logo {
     font-size: 1.5rem;
     letter-spacing: 3px;
@@ -875,7 +878,6 @@ body {
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 6px;
 }
 .submit-btn:hover {
     background: var(--accent-dark);
@@ -924,11 +926,7 @@ body {
     height: 1px;
     background: var(--accent);
     margin: 0 auto;
-    transition: transform 0.3s ease, opacity 0.3s ease;
 }
-.mobile-menu-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.mobile-menu-btn.open span:nth-child(2) { opacity: 0; }
-.mobile-menu-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ===== АДАПТИВ: ≤1100px ===== */
 @media (max-width: 1100px) {
@@ -961,6 +959,11 @@ body {
 
 /* ===== АДАПТИВ: ≤768px (объединено) ===== */
 @media (max-width: 768px) {
+    .submit-btn {
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 0.8rem;
+    }
     /* --- Навигация --- */
     .navbar { padding: 2px 0; }
     .nav-container {
@@ -974,38 +977,60 @@ body {
     .logo { margin: 0; flex-shrink: 0; }
     .mobile-menu-btn { display: flex; margin-left: auto; flex-shrink: 0; }
 
-    /* Меню и языки — выезжающая панель */
-    .nav-links,
-    .lang-switcher {
+    /* Одна выезжающая панель для всего меню */
+    .mobile-menu-panel {
+        display: flex;
+        flex-direction: column;
         position: fixed;
-        top: 64px;
+        top: 40px;
         left: 0;
         width: 100%;
         background: rgba(11, 12, 16, 0.98);
         backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border);
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        padding: 24px 20px;
+        padding: 0 0 10px 0 ;
         opacity: 0;
         pointer-events: none;
         transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.3s ease;
         z-index: 999;
     }
-    .nav-links.mobile-open,
-    .lang-switcher.mobile-open {
+    .mobile-menu-panel.mobile-open {
         opacity: 1;
         pointer-events: auto;
         transform: translateY(0);
     }
-    .nav-links li { width: 100%; text-align: center; }
-    .nav-link { display: block; padding: 10px 0; font-size: 1rem; }
-    .lang-switcher.mobile-open {
-        top: calc(64px + 4 * 44px + 40px);
+
+    /* Всё меню — один вертикальный список */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        list-style: none;
+    }
+    .nav-links li { width: 100%; }
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+        font-size: 1rem;
+        border-bottom: none;
+    }
+
+    /* Языки — последний пункт того же списка */
+    .lang-item {
+        display: block;
+        width: 100%;
+    }
+    .lang-switcher {
+        display: flex;
         flex-direction: row;
         justify-content: center;
+        gap: 12px;
+        padding: 12px 0 0;
     }
 
     /* --- Hero --- */
@@ -1066,7 +1091,7 @@ body {
     }
     .contact-info { display: contents; }
     .contact-info .contact-heading { display: none; }
-    .form-container { order: 2; margin-bottom: 0; padding: 32px 24px; }
+    .form-container { order: 2; margin-bottom: 0; padding: 26px; }
     .contact-details {
         order: 3;
         flex-direction: row;
@@ -1110,5 +1135,5 @@ body {
     .square-btn { width: 50px; height: 50px; font-size: 0.9rem; }
     .section-heading { font-size: 1rem; }
     .service-card, .project-info { padding: 24px 20px; }
-    .form-container { padding: 28px 20px; }
+    .form-container { padding: 20px; }
 }

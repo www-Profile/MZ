@@ -322,21 +322,16 @@ if (form && submitBtn) {
 
 // ===== МОБИЛЬНОЕ МЕНЮ =====
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinksEl = document.querySelector('.nav-links');
-const langSwitcherEl = document.querySelector('.lang-switcher');
+const mobileMenuPanel = document.getElementById('mobileMenuPanel');
 
-if (mobileMenuBtn && navLinksEl && langSwitcherEl) {
+if (mobileMenuBtn && mobileMenuPanel) {
     mobileMenuBtn.addEventListener('click', () => {
-        mobileMenuBtn.classList.toggle('open');
-        navLinksEl.classList.toggle('mobile-open');
-        langSwitcherEl.classList.toggle('mobile-open');
+        mobileMenuPanel.classList.toggle('mobile-open');
     });
 
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenuBtn.classList.remove('open');
-            navLinksEl.classList.remove('mobile-open');
-            langSwitcherEl.classList.remove('mobile-open');
+            mobileMenuPanel.classList.remove('mobile-open');
         });
     });
 }
