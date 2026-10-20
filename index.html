@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta name="description" content="Портфолио Матвея Завьялова — начинающего веб-разработчика">
     <title>Матвей Завьялов | Веб-разработка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#f76a40">
     <link rel="stylesheet" href="style.css">
@@ -46,8 +47,7 @@
                 <div class="hero-photo-block">
                     <div class="photo-frame-decoration"></div>
                     <div class="photo-frame">
-                        <!-- ЗАМЕНИТЕ этот блок на <img src="photo.jpg" alt="Матвей Завьялов"> -->
-                        <img src="images/photo.png" alt="________________">
+                        <img src="images/photo1.png" alt="________________">
                     </div>
                     <div class="photo-floating-dot dot-1"></div>
                     <div class="photo-floating-dot dot-2"></div>
@@ -60,12 +60,14 @@
                         <span class="hero-last accent" data-key="lastName">Завьялов</span>
                     </h1>
 
-                    <p class="hero-title" data-key="heroTitle">Начинающий веб-разработчик</p>
+<p class="hero-title" data-key="heroTitle">Веб-разработчик · Frontend</p>
 
-                    <p class="hero-description" data-key="heroDescription">
-                        Создаю современные адаптивные сайты и Telegram-ботов.
-                        Учусь на бухгалтера-экономиста, но веб-разработка - моё главное увлечение.
-                    </p>
+<p class="hero-description" data-key="heroDescription">
+    Делаю сайты и веб-приложения на чистом JavaScript. Освоил стек
+    самостоятельно — от вёрстки и адаптива до PWA и работы
+    в реальном времени. Учусь на бухгалтера-экономиста, но код — это
+    то, чем я занимаюсь каждый день.
+</p>
 
                     <div class="hero-actions">
                         <a href="#fourthSection" class="btn btn-primary" data-key="heroCTA">Обсудить проект</a>
@@ -199,156 +201,174 @@
                 <div class="projects-grid">
 <div class="project-card">
     <div class="project-thumbnail thumb-1">
-        <span class="project-icon-1">ZM</span>
+        <span class="project-icon-1">MZ</span>
     </div>
     <div class="project-info">
         <h3 data-key="project1Title">Портфолио</h3>
         <p data-key="project1Desc">Сайт-визитка, который вы сейчас смотрите. Создан с нуля: HTML, CSS, JavaScript, адаптивная вёрстка, форма с отправкой в VK.</p>
-        <button class="project-btn" onclick="openProject1Modal()">
+        <button class="project-btn" onclick="openProjectModal('project1Modal')">
             Узнать больше
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
     </div>
 </div>
 
-                    <div class="project-card">
-                        <div class="project-thumbnail thumb-2">
-                            <span class="project-icon">🤖</span>
-                        </div>
-                        <div class="project-info">
-                            <h3 data-key="project2Title">Telegram-бот</h3>
-                            <p data-key="project2Desc">Бот для приёма заявок и автоматизации общения с клиентами. Подключается к сайту и отправляет уведомления в Telegram.</p>
+<div class="project-card project-card--best">
+    <div class="service-badge" data-key="servicePopular">Лучший проект</div>
+    <div class="project-thumbnail thumb-2">
+        <span class="project-icon-sportapp">SportApp</span>
+    </div>
+    <div class="project-info">
+        <h3 data-key="project2Title">SportApp</h3>
+        <p data-key="project2Desc">Полноценное PWA для тренировок с синхронизацией в реальном времени через Firebase. Регистрация, тренировки, статистика, социальные функции, геймификация и офлайн-режим.</p>
+        <button class="project-btn" onclick="openProjectModal('project2Modal')">
+            Узнать больше
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</div>
 
-                        </div>
-                    </div>
+<div class="project-card">
+    <div class="project-thumbnail thumb-3">
+        <span class="project-icon-record"><span class="logo-bold">RE</span>CORD</span>
+    </div>
+    <div class="project-info">
+        <h3 data-key="project3Title">RECORD</h3>
+        <p data-key="project3Desc">Одностраничный сайт для спортзала в Санкт-Петербурге: hero-секция, блок «Почему мы», фотогалерея, тарифы, контакты с Яндекс.Картой.</p>
+        <button class="project-btn" onclick="openProjectModal('project3Modal')">
+            Узнать больше
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</div>
 
-                    <div class="project-card">
-                        <div class="project-thumbnail thumb-3">
-                            <span class="project-icon">☕</span>
-                        </div>
-                        <div class="project-info">
-                            <h3 data-key="project3Title">Лендинг для кофейни</h3>
-                            <p data-key="project3Desc">Концепт одностраничного сайта для кофейни: меню, галерея, форма бронирования. Дизайн в тёплых тонах с плавными анимациями.</p>
+<div class="project-card">
+    <div class="project-thumbnail thumb-4">
+        <span class="project-icon-snowpeak">SNOW<span class="highlight-peak">PEAK</span></span>
+    </div>
+    <div class="project-info">
+        <h3 data-key="project4Title">SnowPeak</h3>
+        <p data-key="project4Desc">Лендинг горнолыжного курорта: hero с параллаксом, интерактивные карточки трасс и проживания с модалками, ски-пассы, бронирование, снежная анимация.</p>
+        <button class="project-btn" onclick="openProjectModal('project4Modal')">
+            Узнать больше
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</div>
 
-                        </div>
-                    </div>
+<div class="project-card">
+    <div class="project-thumbnail thumb-5">
+        <span class="project-icon-flash">Flash<span class="flash-accent">-Cards</span></span>
+    </div>
+    <div class="project-info">
+        <h3 data-key="project5Title">Flash-Cards</h3>
+        <p data-key="project5Desc">Приложение для изучения чего угодно через карточки: создаете свои папки, в них карточки, особые карточки добавляете в избранное, настраиваете приложение под себя.</p>
+        <button class="project-btn" onclick="openProjectModal('project5Modal')">
+            Узнать больше
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</div>
 
-                    <div class="project-card">
-                        <div class="project-thumbnail thumb-4">
-                            <span class="project-icon">🧮</span>
-                        </div>
-                        <div class="project-info">
-                            <h3 data-key="project4Title">Калькулятор</h3>
-                            <p data-key="project4Desc">Простой калькулятор на JavaScript. Тренировочный проект для отработки работы с DOM, событиями и логикой вычислений.</p>
-
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-thumbnail thumb-5">
-                            <span class="project-icon">✅</span>
-                        </div>
-                        <div class="project-info">
-                            <h3 data-key="project5Title">Список задач</h3>
-                            <p data-key="project5Desc">To-Do приложение с добавлением, удалением и отметкой выполненных задач. Сохраняет данные в браузере, чтобы не терять при перезагрузке.</p>
-
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-thumbnail thumb-6">
-                            <span class="project-icon">🌤️</span>
-                        </div>
-                        <div class="project-info">
-                            <h3 data-key="project6Title">Погодное приложение</h3>
-                            <p data-key="project6Desc">Мини-приложение, которое показывает текущую погоду в выбранном городе. Работает с внешним API и обновляет данные по запросу.</p>
-
-                        </div>
-                    </div>
+<div class="project-card">
+    <div class="project-thumbnail thumb-6">
+        <span class="project-icon-coccoon">coccoon</span>
+    </div>
+    <div class="project-info">
+        <h3 data-key="project6Title">coccoon</h3>
+        <p data-key="project6Desc">Рабочее пространство с виджетами: заметки, рисовалка, планы, трекер привычек, календарь, калькулятор и конвертер. Всё сохраняется локально.</p>
+        <button class="project-btn" onclick="openProjectModal('project6Modal')">
+            Узнать больше
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</div>
                 </div>
             </div>
         </section>
 
         <div class="section-divider"></div>
 
-        <!-- ===== СЕКЦИЯ 4: КОНТАКТЫ ===== -->
-        <section class="fourth-section" id="fourthSection">
-            <div class="fourth-bg-pattern"></div>
-            <div class="fourth-glow"></div>
+<!-- ===== СЕКЦИЯ 4: КОНТАКТЫ ===== -->
+<section class="fourth-section" id="fourthSection">
+    <div class="fourth-bg-pattern"></div>
+    <div class="fourth-glow"></div>
 
-            <div class="fourth-container">
-<div class="contact-info">
-    <h2 class="contact-heading" data-key="contactHeading">Давайте <span class="accent">работать</span> вместе</h2>
+    <div class="fourth-container">
+        <h2 class="contact-heading" data-key="contactHeading">Давайте <span class="accent">работать</span> вместе</h2>
 
-<div class="contact-details">
-    <a href="https://t.me/username" class="contact-square" target="_blank" rel="noopener">
-        <span class="contact-icon">💬</span>
-        <div class="contact-square-text">
-            <span class="contact-label">Telegram</span>
-            <span class="contact-value">@username</span>
-        </div>
-        <span class="contact-square-label">TG</span>
-    </a>
-    <a href="https://vk.com/username" class="contact-square" target="_blank" rel="noopener">
-        <span class="contact-icon">💬</span>
-        <div class="contact-square-text">
-            <span class="contact-label">ВКонтакте</span>
-            <span class="contact-value">vk.com/username</span>
-        </div>
-        <span class="contact-square-label">VK</span>
-    </a>
-    <a href="mailto:matvzg7796@mail.ru" class="contact-square">
-        <span class="contact-icon">📧</span>
-        <div class="contact-square-text">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">matvzg7796@mail.ru</span>
-        </div>
-        <span class="contact-square-label">Email</span>
-    </a>
-</div>
+        <div class="fourth-columns">
+            <div class="contact-info">
+                <div class="contact-details">
+                    <a href="https://t.me/username" class="contact-square" target="_blank" rel="noopener">
+                        <span class="contact-icon">💬</span>
+                        <div class="contact-square-text">
+                            <span class="contact-label">Telegram</span>
+                            <span class="contact-value">@username</span>
+                        </div>
+                        <span class="contact-square-label">TG</span>
+                    </a>
+                    <a href="https://vk.com/username" class="contact-square" target="_blank" rel="noopener">
+                        <span class="contact-icon">💬</span>
+                        <div class="contact-square-text">
+                            <span class="contact-label">ВКонтакте</span>
+                            <span class="contact-value">vk.com/username</span>
+                        </div>
+                        <span class="contact-square-label">VK</span>
+                    </a>
+                    <a href="mailto:matvzg7796@mail.ru" class="contact-square">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-square-text">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">matvzg7796@mail.ru</span>
+                        </div>
+                        <span class="contact-square-label">Email</span>
+                    </a>
+                </div>
 
-    <div class="contact-note">
-        <span class="note-icon">💡</span>
-        <span data-key="contactNote">Чем подробнее опишете задачу, тем быстрее я смогу ответить с решением.</span>
-    </div>
-</div>
-
-                <div class="form-container">
-                    <h2 data-key="formTitle">Оставьте заявку</h2>
-                    <form id="orderForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="formName" placeholder=" " required>
-                                <label data-key="formName">Имя</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="formPhone" placeholder=" " required>
-                                <label data-key="formPhone">Телефон</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="formEmail" placeholder=" " required>
-                            <label data-key="formEmail">Email</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="formService" list="services" placeholder=" " required>
-                            <datalist id="services">
-                                <option value="Сайт-визитка">
-                                <option value="Лендинг">
-                                <option value="Интернет-магазин">
-                                <option value="Telegram-бот">
-                            </datalist>
-                            <label data-key="formServiceLabel">Тип сайта</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="formComment" placeholder=" ">
-                            <label data-key="formComment">Комментарий</label>
-                        </div>
-                        <button type="submit" class="submit-btn" data-key="formSubmit">Отправить</button>
-                    </form>
+                <div class="contact-note">
+                    <span class="note-icon">💡</span>
+                    <span data-key="contactNote">Чем подробнее опишете задачу, тем быстрее я смогу ответить с решением.</span>
                 </div>
             </div>
-        </section>
+
+            <div class="form-container">
+                <h2 data-key="formTitle">Оставьте заявку</h2>
+                <form id="orderForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="formName" placeholder=" " required>
+                            <label data-key="formName">Имя</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="formPhone" placeholder=" " required>
+                            <label data-key="formPhone">Телефон</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="formEmail" placeholder=" " required>
+                        <label data-key="formEmail">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="formService" list="services" placeholder=" " required>
+                        <datalist id="services">
+                            <option value="Сайт-визитка">
+                            <option value="Лендинг">
+                            <option value="Интернет-магазин">
+                            <option value="Telegram-бот">
+                        </datalist>
+                        <label data-key="formServiceLabel">Тип сайта</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="formComment" placeholder=" ">
+                        <label data-key="formComment">Комментарий</label>
+                    </div>
+                    <button type="submit" class="submit-btn" data-key="formSubmit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
@@ -360,12 +380,13 @@
     <!-- ===== МОДАЛКА: ПРОЕКТ 1 «ПОРТФОЛИО» ===== -->
 <div class="project-modal" id="project1Modal">
     <div class="project-modal-content">
-        <button class="project-modal-close" onclick="closeProject1Modal()" aria-label="Закрыть">
+        <button class="project-modal-close" onclick="closeProjectModal('project1Modal')" aria-label="Закрыть">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
 
-<div class="project-modal-preview">
-    <span class="project-icon-1">ZM</span>
+<div class="project-modal-preview thumb-1" title="Вы уже на этом сайте">
+    <span class="project-icon-1">MZ</span>
+    <p class="project-modal-preview-hint">Вы уже на этом сайте</p>
 </div>
 
         <h2 class="project-modal-title">Портфолио</h2>
@@ -408,10 +429,646 @@
         </div>
 
 <div class="project-modal-actions">
-    <button class="project-modal-btn project-modal-btn-secondary" onclick="closeProject1Modal()">
+    <button class="project-modal-btn project-modal-btn-secondary" onclick="closeProjectModal('project1Modal')">
         Закрыть
     </button>
 </div>
+    </div>
+</div>
+
+    <!-- ===== МОДАЛКА: ПРОЕКТ 2 «SPORTAPP» ===== -->
+<div class="project-modal" id="project2Modal">
+    <div class="project-modal-content">
+        <button class="project-modal-close" onclick="closeProjectModal('project2Modal')" aria-label="Закрыть">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+<div class="project-modal-preview thumb-2" onclick="openProjectSite('sportapp')" role="link" tabindex="0" title="Открыть сайт">
+    <span class="project-icon-sportapp">SportApp</span>
+    <p class="project-modal-preview-hint">Нажмите, чтобы открыть сайт</p>
+</div>
+
+        <h2 class="project-modal-title">SportApp</h2>
+        <p class="project-modal-subtitle">PWA для тренировок с синхронизацией в реальном времени</p>
+
+        <div class="project-modal-section">
+            <h3>О проекте</h3>
+            <p>Полноценное Progressive Web App для тренировок, написанное с нуля без фреймворков и конструкторов. Приложение объединяет персональный дневник тренировок, аналитику прогресса, социальную сеть и геймификацию. Работает офлайн, устанавливается на телефон как нативное приложение и синхронизирует данные между устройствами через Firebase.</p>
+            <p>Проект разработан от идеи до продакшена: продумана архитектура базы данных, кэширование, обработка ошибок, состояния загрузки, UX всех сценариев — от первого входа до совместной тренировки с друзьями.</p>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Масштаб проекта</h3>
+            <div class="project-modal-tags">
+                <span>~15 000 строк кода</span>
+                <span>месяц плотной работы</span>
+                <span>12+ коллекций Firestore</span>
+                <span>200+ упражнений</span>
+                <span>Добавление друзей</span>
+                <span>Совместный тренировки</span>
+                <span>Огрмное количество настроек и функций</span>
+            </div>
+        </div>
+
+<div class="project-modal-section">
+    <h3>Аутентификация и регистрация</h3>
+    <ul>
+        <li>Пошаговая регистрация с понятным прогрессом — пользователь всегда видит, сколько шагов осталось</li>
+        <li>Обязательное подтверждение почты — защита от фейковых аккаунтов</li>
+        <li>Автоматическая очистка неподтверждённых аккаунтов</li>
+        <li>Восстановление забытого пароля по почте</li>
+        <li>Смена email и пароля с подтверждением личности</li>
+        <li>Полный набор юридических документов: соглашение, политика конфиденциальности, согласие на обработку данных</li>
+        <li>Явное согласие пользователя с условиями через чекбоксы</li>
+    </ul>
+</div>
+
+<div class="project-modal-section">
+    <h3>База данных и синхронизация</h3>
+    <ul>
+        <li>Данные хранятся в облаке и синхронизируются между устройствами в реальном времени</li>
+        <li>Многоуровневое кэширование — приложение работает быстро и не грузит лишний раз сеть</li>
+        <li>Умная обработка одновременных запросов — дублирующиеся вызовы не создают нагрузку</li>
+        <li>Массовая загрузка данных о друзьях одним запросом вместо десятков отдельных</li>
+        <li>Офлайн-режим: тренировки сохраняются локально и синхронизируются при появлении сети</li>
+        <li>Кэш автоматически сбрасывается при изменении данных</li>
+    </ul>
+</div>
+
+<div class="project-modal-section">
+    <h3>Тренировки</h3>
+    <ul>
+        <li>Несколько категорий программ — от силовых до фитнеса и особых форматов</li>
+        <li>Три уровня сложности для каждой программы: от новичка до продвинутого</li>
+        <li>Большой каталог упражнений с удобным поиском и фильтрами по группам мышц</li>
+        <li>Программы подстраиваются под доступный инвентарь — гантели, турник, коврик или только вес тела</li>
+        <li>Возможность создавать собственные тренировки с настройкой названия и оформления</li>
+        <li>Гибкая настройка упражнений: подходы, повторения или время, вес</li>
+        <li>Удобная сортировка упражнений перетаскиванием</li>
+        <li>Настройка паузы между упражнениями под свой темп</li>
+        <li>Встроенные таймеры для упражнений и отдыха, общий секундомер</li>
+        <li>Пауза тренировки в любой момент</li>
+        <li>Честный расчёт опыта в зависимости от объёма и сложности нагрузки</li>
+    </ul>
+</div>
+
+<div class="project-modal-section">
+    <h3>Совместные тренировки</h3>
+    <ul>
+        <li>Приглашение друзей на тренировку в реальном времени</li>
+        <li>Синхронизация прогресса всех участников — каждый видит, как тренируются остальные</li>
+        <li>Ожидание подключения всех участников перед стартом</li>
+        <li>Живой прогресс-бар по каждому участнику</li>
+        <li>Синхронизированное завершение упражнений и всей тренировки</li>
+        <li>Автоматическая очистка «зависших» сессий</li>
+        <li>Уведомления о приглашениях</li>
+        <li>Возможность отменить приглашение организатором</li>
+    </ul>
+</div>
+
+<div class="project-modal-section">
+    <h3>Статистика</h3>
+    <ul>
+        <li>Подробная личная статистика: время, тренировки, упражнения, нагрузка по группам мышц</li>
+        <li>Календарь активности с наглядной индикацией тренировочных дней</li>
+        <li>Нагрузочный индекс по неделям с переключением месяцев</li>
+        <li>Графики прогресса тела по разным параметрам</li>
+        <li>История тренировок с удобными фильтрами</li>
+        <li>Ежемесячные значки, которые следят за регулярностью выполнения заданий</li>
+        <li>Общая статистика сообщества: активность всех пользователей, рейтинги, достижения и онлайн-счётчик</li>
+        <li>Совместная цель сообщества с наградой для самых активных участников</li>
+    </ul>
+</div>
+
+<div class="project-modal-section">
+    <h3>Социальные функции</h3>
+    <ul>
+        <li>Поиск пользователей по имени</li>
+        <li>Заявки в друзья с уведомлениями и возможностью посмотреть профиль</li>
+        <li>Профиль друга с уровнем, достижениями и статистикой</li>
+        <li>История активности друзей — тренировки, достижения, повышение уровня</li>
+        <li>Фильтрация истории по конкретному другу и настройка её видимости</li>
+        <li>QR-код и ссылка для быстрого обмена профилем</li>
+        <li>Добавление в друзья по ссылке в один клик</li>
+        <li>Вызовы друзьям — соревнование на результат за выбранный срок</li>
+        <li>Гибкая настройка вызова: тип, срок и цель</li>
+        <li>Принятие и отклонение входящих вызовов прямо в приложении</li>
+        <li>Лидерборд вызова с обновлением прогресса в реальном времени</li>
+        <li>Возможность сдаться и выйти из соревнования</li>
+    </ul>
+</div>
+
+<div class="project-modal-section">
+    <h3>Геймификация</h3>
+    <ul>
+        <li>Прокачка уровня через опыт за тренировки и активность</li>
+        <li>Опыт начисляется за тренировки, задания, достижения и победы в вызовах</li>
+        <li>Набор достижений за разные стороны прогресса</li>
+        <li>Подсчёт серии ежедневных тренировок с защитой от случайных пропусков</li>
+        <li>Стартовые задания для знакомства с приложением</li>
+        <li>Ежедневные задания, которые подстраиваются под уровень пользователя:
+            <ul style="margin-top: 0.3rem;">
+                <li>Физические упражнения с адаптацией сложности</li>
+                <li>Социальные задания — тренировки с друзьями и просмотр профилей</li>
+                <li>Задания на общую активность</li>
+                <li>Умные задания, которые подсказывают слабые места в тренировках</li>
+            </ul>
+        </li>
+        <li>Награда за регулярное выполнение заданий</li>
+    </ul>
+</div>
+
+<div class="project-modal-section">
+    <h3>Лента</h3>
+    <ul>
+        <li>Создание постов с фото и статистикой тренировки</li>
+        <li>Автоматическая отрисовка красивого постера с фото, заголовком и плитками статистики</li>
+        <li>Скачивание готового постера в высоком качестве</li>
+        <li>Умное сжатие изображений, чтобы посты загружались быстро</li>
+        <li>Возможность добавить чужую тренировку к себе одним нажатием</li>
+        <li>Дневной лимит постов с таймером до следующей публикации</li>
+    </ul>
+</div>
+
+<div class="project-modal-section">
+    <h3>Персонализация и UX</h3>
+    <ul>
+        <li>Гибкая настройка акцентного цвета, включая собственные оттенки</li>
+        <li>Светлая, тёмная и системная тема с автоопределением</li>
+        <li>Современная нижняя навигация в стиле iOS с плавающей «капсулой»</li>
+        <li>Автоскрытие навигации при прокрутке для максимального пространства</li>
+        <li>Тактильный отклик при переключении вкладок</li>
+        <li>Скелетоны загрузки — приложение не «замирает» на белом экране</li>
+        <li>Умные уведомления и подсказки без спама</li>
+        <li>Плавные очереди модалок и уведомлений, чтобы они не перекрывали друг друга</li>
+        <li>Бесконечная карусель рекомендаций на главной</li>
+        <li>Обучающий туториал при первом входе</li>
+        <li>Экран обновлений с описанием новых версий</li>
+        <li>Push-уведомления о важных событиях</li>
+        <li>Настройки приватности достижений и истории друзей</li>
+        <li>Редактирование внешнего вида страниц перетаскиванием блоков</li>
+        <li>Сброс прогресса и удаление аккаунта с защитой паролем</li>
+        <li>Связь с администрацией прямо из приложения</li>
+    </ul>
+</div>
+
+        <div class="project-modal-section">
+            <h3>Технологии</h3>
+            <div class="project-modal-tags">
+                <span>HTML5</span>
+                <span>CSS3 (Grid, Flexbox)</span>
+                <span>JavaScript ES6+</span>
+                <span>Firebase Auth</span>
+                <span>Firestore + offline</span>
+                <span>Firebase Cloud Messaging</span>
+                <span>Service Worker</span>
+                <span>Web App Manifest</span>
+                <span>Canvas API</span>
+                <span>Web Share API</span>
+                <span>Web Audio API</span>
+                <span>Sortable.js</span>
+                <span>Font Awesome</span>
+            </div>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Сложности и решения</h3>
+            <p><strong>Синхронизация реального времени.</strong> При совместной тренировке несколько участников одновременно обновляют прогресс в Firestore. Возникали race conditions, когда «записанный» прогресс затирался старым. Решение — точечные обновления через пути вида <code>participantProgress.${uid}</code> (Firestore мержит по полям) + серверные таймстампы + идемпотентность операций.</p>
+            <p><strong>Офлайн-режим.</strong> Firestore отдаёт кэш, но при отсутствии сети нужно было не потерять тренировки. Решение — локальная очередь pendingWorkouts с уникальными localId, синхронизация при событии online или следующем запуске.</p>
+            <p><strong>Производительность.</strong> Каждая тренировка делала 5-10 запросов к Firestore. Решение — многоуровневый кэш с TTL и дедупликация in-flight запросов, плюс батч-запросы для профилей друзей.</p>
+            <p><strong>Лимит Firestore 1 МБ на документ.</strong> Посты с фото превышали лимит. Решение — сжатие через Canvas с подбором размера/качества до целевого размера base64-строки.</p>
+            <p><strong>UX длинной регистрации.</strong> 7 шагов — много отказов. Решение — плавные анимации, прогресс-полоски, возможность пропустить шаги, чёткое объяснение зачем нужны данные.</p>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>В разработке</h3>
+            <ul>
+                <li>Загрузка собственных фото к тренировкам (сейчас в блоке превью — placeholder)</li>
+                <li>Полноценная покупка PREMIUM через платёжную систему (сейчас есть только UI модалки с ценами и таблицей сравнения; покупка открывает модалку «Функция не доступна»)</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-actions">
+            <button class="project-modal-btn project-modal-btn-secondary" onclick="closeProjectModal('project2Modal')">
+                Закрыть
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===== МОДАЛКА: ПРОЕКТ 3 «RECORD» ===== -->
+<div class="project-modal" id="project3Modal">
+    <div class="project-modal-content">
+        <button class="project-modal-close" onclick="closeProjectModal('project3Modal')" aria-label="Закрыть">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div class="project-modal-preview thumb-3" onclick="openProjectSite('gym')" role="link" tabindex="0" title="Открыть сайт">
+            <span class="project-icon-record"><span class="logo-bold">RE</span>CORD</span>
+            <p class="project-modal-preview-hint">Нажмите, чтобы открыть сайт</p>
+        </div>
+
+        <h2 class="project-modal-title">RECORD</h2>
+        <p class="project-modal-subtitle">Лендинг для спортзала в Санкт-Петербурге</p>
+
+        <div class="project-modal-section">
+            <h3>О проекте</h3>
+            <p>Одностраничный сайт-визитка для спортзала. Главная задача — конвертировать посетителя в звонок или запись на тренировку. Атмосфера «настоящего мужского спорта» создаётся через тёмную палитру, крупную типографику Oswald, свободные веса на фото и красные акценты.</p>
+            <p>Каждый блок ведёт к целевому действию: hero с призывом выбрать абонемент → особенности зала → галерея → прозрачные тарифы с выделенным «хитом» → прямая связь телефоном и формой.</p>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Структура сайта</h3>
+            <ul>
+                <li>Sticky-шапка с логотипом, меню, телефоном и бургером для мобильных</li>
+                <li>Hero-секция с фоновым фото, затемнением и размытым овалом под текстом — для читаемости на любой картинке</li>
+                <li>Блок «Почему RECORD» — 6 карточек с иконками: веса, кардио, тренеры, фитнес для девушек, душ, время работы</li>
+                <li>Галерея из 6 фотографий зала с подписями и hover-эффектом «оживления цвета»</li>
+                <li>Тарифы — 3 карточки с выделением популярного варианта и бейджем «Хит»</li>
+                <li>Контакты — телефон, адрес, режим работы и встроенная Яндекс.Карта</li>
+                <li>Футер с копирайтом</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Дизайн и визуальные приёмы</h3>
+            <ul>
+                <li>Тёмная палитра с красным акцентом — ассоциируется с силой и энергией</li>
+                <li>Плавный переход от фотографии к тёмному фону через градиент</li>
+                <li>Размытый овал под hero-текстом: текст читается на любом фоне без отдельной плашки</li>
+                <li>Фото галереи в спокойных фильтрах, при наведении становятся ярче — эффект «оживления»</li>
+                <li>Кастомный красный скроллбар в цвет бренда</li>
+                <li>Плавный скролл по якорям навигации</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Адаптивность</h3>
+            <ul>
+                <li>Десктоп: 3 фото в галерее, 3 карточки тарифов в ряд</li>
+                <li>Планшет: галерея перестраивается в 2 колонки</li>
+                <li>Мобильные: галерея в 2 колонки, тарифы в 3 узкие колонки, блок «О нас» — 2 карточки в ряд</li>
+                <li>Отдельная оптимизация под очень узкие экраны — пропорциональное уменьшение шрифтов и отступов, чтобы всё уместилось без горизонтального скролла</li>
+                <li>На мобильных меню и телефон скрыты, логотип центрируется — фокус на контенте</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Технологии</h3>
+            <div class="project-modal-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Grid / Flexbox</span>
+                <span>Vanilla JavaScript</span>
+                <span>PWA Manifest</span>
+                <span>Яндекс.Карты</span>
+                <span>Font Awesome</span>
+                <span>Google Fonts</span>
+            </div>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Сложности и решения</h3>
+            <p><strong>Читаемость текста на фоне фото.</strong> На hero-секции стоит фотография зала, а поверх — крупный заголовок. Тёмное затемнение делало фото скучным. Решение — дополнительно размытый полупрозрачный овал через <code>filter: blur(40px)</code> только под блоком с текстом: картинка остаётся яркой по краям, а в центре текст читается идеально.</p>
+            <p><strong>Узкие экраны.</strong> Тарифы с 3 карточками на мобильных обычно превращаются в вертикальный список — это занимает много места. Решение — оставить их в 3 колонки, но радикально уменьшить шрифты и отступы через отдельный медиа-запрос под 380px. Пользователь сразу видит все варианты и сравнение цен.</p>
+            <p><strong>Единая типографика.</strong> Oswald и Roboto загружаются с Google Fonts — важна скорость первой отрисовки. Подключены через <code>preconnect</code> и один объединённый запрос со всеми начертаниями.</p>
+        </div>
+
+        <div class="project-modal-actions">
+            <button class="project-modal-btn project-modal-btn-secondary" onclick="closeProjectModal('project3Modal')">
+                Закрыть
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===== МОДАЛКА: ПРОЕКТ 4 «SNOWPEAK» ===== -->
+<div class="project-modal" id="project4Modal">
+    <div class="project-modal-content">
+        <button class="project-modal-close" onclick="closeProjectModal('project4Modal')" aria-label="Закрыть">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div class="project-modal-preview thumb-4" onclick="openProjectSite('snowpeak')" role="link" tabindex="0" title="Открыть сайт">
+            <span class="project-icon-snowpeak">SNOW<span class="highlight-peak">PEAK</span></span>
+            <p class="project-modal-preview-hint">Нажмите, чтобы открыть сайт</p>
+        </div>
+
+        <h2 class="project-modal-title">SnowPeak</h2>
+        <p class="project-modal-subtitle">Лендинг горнолыжного курорта</p>
+
+        <div class="project-modal-section">
+            <h3>О проекте</h3>
+            <p>Полноценный сайт-презентация горнолыжного курорта с интерактивными элементами. Концепция — премиальный зимний отдых: холодная палитра голубого и тёмно-синего, снежная анимация, элегантная типографика Playfair Display для заголовков и Montserrat для текста.</p>
+            <p>Каждый раздел ведёт посетителя по воронке: узнать о курорте → изучить трассы → выбрать проживание → купить ски-пасс → забронировать отдых. Интерактивные карточки трасс и отелей открывают модальные окна с подробной информацией.</p>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Структура сайта</h3>
+            <ul>
+                <li>Sticky-навигация с блюром и подсветкой активного раздела при скролле</li>
+                <li>Hero-секция с параллакс-эффектом при движении мыши, статистикой курорта и CTA-кнопками</li>
+                <li>Блок «О курорте» с сеткой фотографий и списком преимуществ</li>
+                <li>Трассы — 4 карточки разной сложности с интерактивными модалками: длина, перепад высот, уклон, особенности</li>
+                <li>Правила безопасности — 6 карточек с иконками</li>
+                <li>Проживание — 4 варианта от апартаментов до VIP-резиденции с подробными модалками</li>
+                <li>Прокат снаряжения с ценами и брендами</li>
+                <li>Ски-пассы — две группы тарифов: по времени и по количеству подъёмов</li>
+                <li>Схема курорта с легендой трасс</li>
+                <li>Режим работы склонов + рекомендации по загруженности</li>
+                <li>События — 6 типов праздников</li>
+                <li>Новости и акции с карточками</li>
+                <li>Отзывы клиентов</li>
+                <li>Форма онлайн-бронирования с двухколоночной раскладкой</li>
+                <li>Контакты с картой</li>
+                <li>Футер с навигацией и соцсетями</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Интерактивность</h3>
+            <ul>
+                <li>Карточки трасс и проживания открывают модалки с подгрузкой данных из JavaScript-объектов</li>
+                <li>Модалки закрываются по клику на фон, по крестику и по Escape</li>
+                <li>Анимация появления элементов при скролле через IntersectionObserver</li>
+                <li>Параллакс hero-секции при движении мыши</li>
+                <li>Снежинки, падающие сверху — генерируются случайно в реальном времени</li>
+                <li>Плавный скролл по якорным ссылкам навигации</li>
+                <li>В форме бронирования появляются дополнительные поля (количество гостей, дата) при выборе «Организовать праздник»</li>
+                <li>Мобильное меню-бургер с анимацией иконки в крестик</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Дизайн и визуальные приёмы</h3>
+            <ul>
+                <li>Холодная палитра: глубокий тёмно-синий, голубой акцент, белые элементы — атмосфера гор и снега</li>
+                <li>Типографика в двух уровнях: Playfair Display для заголовков (премиальность), Montserrat для текста (читаемость)</li>
+                <li>Glass-morphism: полупрозрачные карточки с backdrop-filter blur</li>
+                <li>Анимация падающих снежинок только на десктопе — на мобильных отключена для производительности</li>
+                <li>Плавные hover-эффекты: карточки приподнимаются, ссылки подчёркиваются, иконки подсвечиваются</li>
+                <li>Градиентные переходы между секциями вместо резких границ</li>
+                <li>Кастомный синий скроллбар в цвет бренда</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Адаптивность</h3>
+            <ul>
+                <li>Десктоп: сетки в 4 колонки для карточек и тарифов</li>
+                <li>Планшет: перестройка в 2 колонки для трасс, проживания, проката, отзывов</li>
+                <li>Мобильные: карточки в 1 колонку, hero-секция с уменьшенным заголовком, мобильное меню через бургер</li>
+                <li>На экранах до 480px дополнительно уменьшены отступы и шрифты</li>
+                <li>Снежная анимация и параллакс автоматически отключаются на мобильных</li>
+                <li>Все секции сохраняют читаемость и удобство без горизонтального скролла</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Технологии</h3>
+            <div class="project-modal-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Grid / Flexbox</span>
+                <span>Vanilla JavaScript</span>
+                <span>IntersectionObserver</span>
+                <span>CSS Animations</span>
+                <span>PWA Manifest</span>
+                <span>Google Fonts</span>
+                <span>OpenWeather API</span>
+            </div>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Сложности и решения</h3>
+            <p><strong>Переиспользование модалок.</strong> Для трасс и проживания нужны одинаковые по структуре модалки с разными данными. Решение — вынести данные в JS-объекты и заполнять один и тот же шаблон при клике на карточку. Один HTML-блок модалки на два типа контента.</p>
+            <p><strong>Снежная анимация без лагов.</strong> Постоянная генерация снежинок через setInterval быстро нагружает браузер. Решение — генерация только на десктопе (на мобильных отключена), ограничение количества одновременно висящих снежинок и автоматическое удаление через 13 секунд.</p>
+            <p><strong>Параллакс без дёрганья.</strong> При движении мыши обновление background-position вызывало рывки. Решение — ограничение обновлений через проверку ширины экрана и небольшие коэффициенты смещения — эффект заметный, но не резкий.</p>
+            <p><strong>Активный пункт меню при скролле.</strong> Нужно было определять, какой раздел сейчас в фокусе. Решение — расчёт позиции каждой секции относительно скролла и подсветка соответствующей ссылки через IntersectionObserver + scroll-listener с поправкой на высоту шапки.</p>
+        </div>
+
+        <div class="project-modal-actions">
+            <button class="project-modal-btn project-modal-btn-secondary" onclick="closeProjectModal('project4Modal')">
+                Закрыть
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===== МОДАЛКА: ПРОЕКТ 5 «FLASH-CARDS» ===== -->
+<div class="project-modal" id="project5Modal">
+    <div class="project-modal-content">
+        <button class="project-modal-close" onclick="closeProjectModal('project5Modal')" aria-label="Закрыть">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div class="project-modal-preview thumb-5" onclick="openProjectSite('flashcards')" role="link" tabindex="0" title="Открыть сайт">
+            <span class="project-icon-flash">Flash<span class="flash-accent">-Cards</span></span>
+            <p class="project-modal-preview-hint">Нажмите, чтобы открыть сайт</p>
+        </div>
+
+        <h2 class="project-modal-title">Flash-Cards</h2>
+        <p class="project-modal-subtitle">PWA для изучения чего угодно через карточки</p>
+
+        <div class="project-modal-section">
+            <h3>О проекте</h3>
+            <p>Приложение для запоминания информации через систему карточек: с одной стороны — вопрос или слово, с другой — ответ или определение. Подходит для изучения языков, терминов, столиц, формул и любых других пар «вопрос-ответ».</p>
+            <p>Полностью работает офлайн — все данные хранятся в localStorage браузера. Устанавливается на телефон как PWA и выглядит как нативное приложение.</p>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Разделы и карточки</h3>
+            <ul>
+                <li>Несколько независимых разделов (колод) — например, «Английский», «Столицы мира», «Наука»</li>
+                <li>Создание и удаление разделов</li>
+                <li>Добавление, редактирование и удаление карточек в каждом разделе</li>
+                <li>Отметка карточек как избранных звёздочкой прямо на карточке или в списке</li>
+                <li>Отдельный список всех карточек раздела с возможностью быстро отредактировать или удалить</li>
+                <li>Счётчик карточек и избранных в каждом разделе</li>
+                <li>Автосохранение всего состояния в localStorage</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Способы просмотра</h3>
+            <ul>
+                <li>Режим «колода» — по одной карточке с переворотом по клику</li>
+                <li>Режим «список» — все карточки раздела списком с быстрыми действиями</li>
+                <li>Фильтр «только избранные» — учить только отмеченные звёздочкой</li>
+                <li>Управление с клавиатуры: пробел — перевернуть, Escape — закрыть модалку</li>
+                <li>Автоматический переход на следующую карточку после просмотра ответа</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Сортировка</h3>
+            <ul>
+                <li>По порядку — карточки идут как добавлены</li>
+                <li>Рандом — перемешивание для лучшего запоминания</li>
+                <li>С конца — обратный порядок</li>
+                <li>Избранные вперёд — сначала карточки со звёздочкой</li>
+                <li>Опция «перемешивать при старте раздела» — каждый заход в раздел начинается со случайного порядка</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Персонализация</h3>
+            <ul>
+                <li>Три темы: светлая, тёмная, системная (с автоопределением и реакцией на смену темы ОС «на лету»)</li>
+                <li>Пять шрифтов карточки: системный, с засечками, моноширинный, округлый, узкий</li>
+                <li>Пять анимаций переворота: Flip Y, Flip X, Fade, Slide, Zoom</li>
+                <li>Три скорости анимации: быстро, обычно, медленно</li>
+                <li>Сброс всех настроек к значениям по умолчанию</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Технологии</h3>
+            <div class="project-modal-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Vanilla JavaScript</span>
+                <span>CSS 3D Transforms</span>
+                <span>localStorage</span>
+                <span>PWA Manifest</span>
+                <span>CSS Variables</span>
+            </div>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Сложности и решения</h3>
+            <p><strong>Синхронизация отображения с фильтром.</strong> Когда включён фильтр «только избранные», индекс карточки в отфильтрованном списке не совпадает с её индексом в полном массиве раздела. Решение — отдельный массив <code>viewIndices</code>, где хранятся реальные индексы видимых карточек. Все операции (переворот, отметка звёздочкой, переход вперёд) работают через этот массив, а изменения применяются к настоящей карточке в исходном массиве.</p>
+            <p><strong>Управление порядком карточек без изменения исходного массива.</strong> Рандом и сортировка не должны ломать физический порядок карточек в разделе — иначе при выключении сортировки всё останется перепутанным. Решение — массив <code>viewOrder</code> с индексами: сортируется только он, а настоящий массив карточек остаётся нетронутым.</p>
+<p><strong>Обновление данных в момент переворота.</strong> Обновлять текст сразу при клике нельзя — пользователь увидит, как на ещё видимой стороне мелькает значение следующей карточки. Решение — обновлять данные на скрытой стороне строго после завершения анимации. Ждём окончания переворота, и только тогда подставляем новое слово на невидимой лицевой стороне (или новое определение на скрытой задней). К моменту, когда сторона снова станет видимой, там уже нужный текст — без «мельканий» чужих значений.</p>
+</div>
+        <div class="project-modal-actions">
+            <button class="project-modal-btn project-modal-btn-secondary" onclick="closeProjectModal('project5Modal')">
+                Закрыть
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===== МОДАЛКА: ПРОЕКТ 6 «COCCOON» ===== -->
+<div class="project-modal" id="project6Modal">
+    <div class="project-modal-content">
+        <button class="project-modal-close" onclick="closeProjectModal('project6Modal')" aria-label="Закрыть">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div class="project-modal-preview thumb-6" onclick="openProjectSite('coccoon')" role="link" tabindex="0" title="Открыть сайт">
+            <span class="project-icon-coccoon">coccoon</span>
+            <p class="project-modal-preview-hint">Нажмите, чтобы открыть сайт</p>
+        </div>
+
+        <h2 class="project-modal-title">coccoon</h2>
+        <p class="project-modal-subtitle">Рабочее пространство с виджетами в одном экране</p>
+
+        <div class="project-modal-section">
+            <h3>О проекте</h3>
+            <p>Личное рабочее пространство, которое заменяет собой сразу несколько приложений: заметки, планы, трекер привычек, календарь, калькулятор и конвертер. Всё на одном экране, ничего лишнего не нужно открывать в соседних вкладках.</p>
+            <p>Концепция — собрать в одном месте всё, что нужно каждый день, и сделать переход к любому инструменту максимально быстрым. Все данные хранятся локально, ничего не отправляется на сервер.</p>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Экран входа</h3>
+            <ul>
+                <li>Отдельная стартовая страница с анимацией</li>
+                <li>Плавный переход на основное пространство через затемнение</li>
+                <li>На телефоне открывается заглушка с просьбой зайти с компьютера — рабочее пространство оптимизировано под широкий экран</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Верхняя панель</h3>
+            <ul>
+                <li>Часы с секундами — всегда перед глазами</li>
+                <li>Секундомер с кнопками старт/пауза/сброс</li>
+                <li>Текущая дата</li>
+                <li>Пять кнопок смены акцентного цвета всего интерфейса</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Левая колонка</h3>
+            <ul>
+                <li>Приложения — быстрые ссылки с эмодзи-иконками: Яндекс Музыка, ChatGPT, Telegram</li>
+                <li>Добавление своих приложений: название, ссылка, выбор эмодзи из большой палитры</li>
+                <li>Планы на разные периоды: день, неделя, месяц, год — с прогресс-баром по каждой категории</li>
+                <li>Кнопка добавления виджетов — расширяет пространство новыми заметками и рисунками</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Центральная колонка</h3>
+            <ul>
+                <li>Заметки с чекбоксами — отмечать важное выполненным одним кликом</li>
+                <li>Рисовалка с тетрадным листом в клетку и палитрой из пяти цветов, с историей отмены и повтора</li>
+                <li>Трекер привычек: сетка пн–вс, прогресс недели обновляется автоматически</li>
+                <li>Календарь с заметками на любой день и цветовой индикацией событий</li>
+                <li>Drag-and-drop виджетов: любой блок можно перетащить вверх или вниз, порядок сохраняется</li>
+                <li>Возможность добавлять несколько заметок и рисунков, удалять их и переименовывать</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Правая колонка</h3>
+            <ul>
+                <li>Научный калькулятор: корень, степени, тригонометрия, логарифмы, проценты, число π</li>
+                <li>Конвертер величин в трёх режимах: длина, вес, валюта</li>
+                <li>Понятный ввод: цифры и операции в одной сетке, отдельные кнопки для функций</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Персонализация и адаптивность</h3>
+            <ul>
+                <li>Пять акцентных цветов на выбор: синий, красный, зелёный, фиолетовый, оранжевый — применяются ко всем виджетам и запоминаются между сессиями</li>
+                <li>Подстраивается под мониторы, ноутбуки и планшеты в альбомной ориентации</li>
+                <li>На узких экранах пропорционально уменьшаются шрифты, кнопки и отступы — всё остаётся читаемым</li>
+                <li>Спроектировано под широкий экран: на телефонах показывается заглушка с просьбой зайти с компьютера</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Сохранение данных</h3>
+            <ul>
+                <li>Каждый виджет хранит свои данные в localStorage под уникальным ключом</li>
+                <li>Заметки, рисунки и настройки восстанавливаются после перезагрузки</li>
+                <li>Порядок виджетов тоже сохраняется</li>
+                <li>При удалении виджета его данные тоже удаляются — ничего не остаётся висеть в хранилище</li>
+            </ul>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Технологии</h3>
+            <div class="project-modal-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Vanilla JavaScript</span>
+                <span>Canvas API</span>
+                <span>localStorage</span>
+                <span>Drag and Drop API</span>
+                <span>CSS Variables</span>
+                <span>Font Awesome</span>
+                <span>PWA Manifest</span>
+            </div>
+        </div>
+
+        <div class="project-modal-section">
+            <h3>Сложности и решения</h3>
+            <p><strong>Несколько экземпляров одного виджета.</strong> Виджеты заметок и рисовалок можно добавлять многократно, но у каждого должны быть свои данные. Решение — каждому экземпляру при создании присваивается уникальный ID на основе времени и случайной строки, а данные хранятся по ключу с этим ID. Клонирование виджета при создании идёт через <code>cloneNode</code> с последующей заменой ID и очисткой данных.</p>
+            <p><strong>Drag-and-drop с индикатором.</strong> При перетаскивании виджета между существующими блоками нужно показать, куда именно он попадёт. Решение — отдельный элемент-индикатор, который позиционируется по координатам курсора относительно середин виджетов и удаляется после сброса. Порядок сохраняется в localStorage.</p>
+            <p><strong>Рисование на canvas.</strong> Стандартные события mouse не учитывают, что canvas может быть меньше своего CSS-размера. Решение — пересчёт координат через <code>getBoundingClientRect()</code> и сохранение истории изменений через <code>getImageData</code> с поддержкой отмены и повтора.</p>
+            <p><strong>Безопасность заметок.</strong> Пользователь может ввести в заметку HTML-тег, и он выполнится. Решение — экранирование через временный DOM-элемент с <code>textContent</code> перед вставкой. Так тег отображается как текст, но не исполняется.</p>
+            <p><strong>Восстановление виджетов после перезагрузки.</strong> Виджеты хранятся в двух местах: HTML-шаблон и список созданных пользователем. При загрузке статичные удаляются и создаются заново из сохранённых данных — это позволяет гибко менять HTML без потери состояния пользователя.</p>
+        </div>
+
+        <div class="project-modal-actions">
+            <button class="project-modal-btn project-modal-btn-secondary" onclick="closeProjectModal('project6Modal')">
+                Закрыть
+            </button>
+        </div>
     </div>
 </div>
 

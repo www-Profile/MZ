@@ -142,28 +142,126 @@ if (mobileMenuBtn && mobileMenuPanel) {
     });
 }
 
-// ===== МОДАЛКА ПРОЕКТА 1 =====
-function openProject1Modal() {
-    document.getElementById('project1Modal').classList.add('open');
+// ===== УНИВЕРСАЛЬНЫЕ ФУНКЦИИ ДЛЯ МОДАЛОК ПРОЕКТОВ =====
+function openProjectModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.classList.add('open');
     document.body.style.overflow = 'hidden';
 }
 
-function closeProject1Modal() {
-    document.getElementById('project1Modal').classList.remove('open');
+function closeProjectModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.classList.remove('open');
     document.body.style.overflow = '';
 }
 
-// Закрытие по клику на фон
+// Закрытие по клику на фон — один обработчик на все модалки проектов
 document.addEventListener('click', function(e) {
-    const modal = document.getElementById('project1Modal');
-    if (modal && e.target === modal) {
-        closeProject1Modal();
+    if (e.target.classList.contains('project-modal') &&
+        e.target.classList.contains('open')) {
+        closeProjectModal(e.target.id);
     }
 });
 
-// Закрытие по Escape
+// Закрытие по Escape — закрывает любую открытую модалку проекта
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-        closeProject1Modal();
+        const openModal = document.querySelector('.project-modal.open');
+        if (openModal) closeProjectModal(openModal.id);
     }
+});
+
+// ===== ССЫЛКИ НА САЙТЫ ПРОЕКТОВ =====
+const PROJECT_SITES = {
+    portfolio:  'https://www-profile.github.io/portfolio/',
+    sportapp:   'https://www-profile.github.io/SportApp/',
+    gym:        'https://www-profile.github.io/Gym-website/',
+    snowpeak:   'https://www-profile.github.io/SNOWPEAK/',
+    flashcards: 'https://www-profile.github.io/Flash-Cards/',
+    coccoon:    'https://www-profile.github.io/coccoon/'
+};
+
+function openProjectSite(projectKey) {
+    const url = PROJECT_SITES[projectKey];
+    if (!url) {
+        console.warn('Неизвестный проект:', projectKey);
+        return;
+    }
+    window.open(url, '_blank', 'noopener,noreferrer');
+}
+
+// ===== SCROLL SPY: ПОДСВЕТКА АКТИВНОГО ПУНКТА МЕНЮ =====
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    if (navLinks.length === 0) return;
+
+    const sections = [];
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+        const section = document.querySelector(href);
+        if (section) sections.push({ link, section });
+    });
+    if (sections.length === 0) return;
+
+    const getOffset = () => {
+        const navbar = document.querySelector('.navbar');
+        return navbar ? navbar.offsetHeight + 20 : 80;
+    };
+
+    function setActive(activeEntry) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        if (activeEntry) activeEntry.link.classList.add('active');
+    }
+
+    function updateActiveLink() {
+        const scrollPos = window.scrollY + getOffset();
+        const scrollBottom = window.scrollY + window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+
+        // Самый низ страницы — подсвечиваем последнюю ссылку
+        if (docHeight - scrollBottom < 50) {
+            setActive(sections[sections.length - 1]);
+            return;
+        }
+
+        // Самый верх страницы — подсвечиваем первую
+        if (window.scrollY < 100) {
+            setActive(sections[0]);
+            return;
+        }
+
+        // Ищем секцию, в которой находится текущая позиция скролла
+        let active = sections[0];
+        for (const entry of sections) {
+            if (entry.section.offsetTop <= scrollPos) {
+                active = entry;
+            }
+        }
+        setActive(active);
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                updateActiveLink();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Мгновенная подсветка при клике (до окончания плавного скролла)
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    window.addEventListener('resize', updateActiveLink);
+    updateActiveLink();
 });
